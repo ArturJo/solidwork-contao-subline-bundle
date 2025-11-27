@@ -21,8 +21,12 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['subline_position'] = [
     'inputType' => 'select',
     'options' => ['above', 'below'],
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['subline_position_ref'],
-    'eval' => ['tl_class' => 'w50'],
-    'sql' => "varchar(16) NOT NULL default 'below'",
+    'default' => 'above',
+    'eval' => [
+        'tl_class' => 'w50 clr',
+        'includeBlankOption' => false
+    ],
+    'sql' => "varchar(16) NOT NULL default 'above'",
 ];
 
 
