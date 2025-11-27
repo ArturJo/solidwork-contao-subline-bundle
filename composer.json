@@ -14,5 +14,10 @@
   },
   "extra": {
     "contao-manager-plugin": "Solidwork\\ContaoSublineBundle\\ContaoManager\\Plugin"
+  },
+  "config": {
+    "allow-plugins": {
+      "contao-components/installer": true
+    }
   }
 }
