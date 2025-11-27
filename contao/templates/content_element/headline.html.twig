@@ -8,31 +8,29 @@ The namespace @Contao refers to the core bundle templates.
 The core template usually defines a 'content' block
 (inherited from _base.html.twig). We override it here.
 #}
-{% block content %}
-    {% block content %}
+    {% block headline_component %}
 
-        {# Subline oben #}
-        {% if subline is defined
-            and subline is not empty
-            and subline_position is defined
-            and subline_position == 'above' %}
-            <div class="sw-subline sw-subline--above">
-                {{ subline|insert_tag|raw }}
+        {# data.subline oben #}
+        {% if data.subline is defined
+            and data.subline is not empty
+            and data.subline_position is defined
+            and data.subline_position == 'above' %}
+            <div class="sw-data.subline sw-data.subline--above">
+                {{ data.subline|insert_tag|raw }}
             </div>
         {% endif %}
 
         {# Original Headline #}
         {{ parent() }}
 
-        {# Subline unten #}
-        {% if subline is defined
-            and subline is not empty
-            and (subline_position is not defined or subline_position == 'below') %}
-            <div class="sw-subline sw-subline--below">
-                {{ subline|insert_tag|raw }}
+        {# data.subline unten #}
+        {% if data.subline is defined
+            and data.subline is not empty
+            and (data.subline_position is not defined or data.subline_position == 'below') %}
+            <div class="sw-data.subline sw-data.subline--below">
+                {{ data.subline|insert_tag|raw }}
             </div>
         {% endif %}
 
     {% endblock %}
 
-{% endblock %}
