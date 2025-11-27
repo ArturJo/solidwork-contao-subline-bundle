@@ -10,25 +10,25 @@ The core template usually defines a 'content' block
 #}
     {% block headline_component %}
 
-        {# data.subline oben #}
-        {% if data.subline is defined
-            and data.subline is not empty
-            and data.subline_position is defined
-            and data.subline_position == 'above' %}
-            <div class="sw-data.subline sw-data.subline--above">
-                {{ data.subline|insert_tag|raw }}
+        {# this.data.subline oben #}
+        {% if this.data.subline is defined
+            and this.data.subline is not empty
+            and this.data.subline_position is defined
+            and this.data.subline_position == 'above' %}
+            <div class="sw-subline sw-subline--above">
+                {{ this.data.subline|insert_tag|raw }}
             </div>
         {% endif %}
 
         {# Original Headline #}
         {{ parent() }}
 
-        {# data.subline unten #}
-        {% if data.subline is defined
-            and data.subline is not empty
-            and (data.subline_position is not defined or data.subline_position == 'below') %}
-            <div class="sw-data.subline sw-data.subline--below">
-                {{ data.subline|insert_tag|raw }}
+        {# this.data.subline unten #}
+        {% if this.data.subline is defined
+            and this.data.subline is not empty
+            and (this.data.subline_position is not defined or this.data.subline_position == 'below') %}
+            <div class="sw-subline sw-subline--below">
+                {{ this.data.subline|insert_tag|raw }}
             </div>
         {% endif %}
 
