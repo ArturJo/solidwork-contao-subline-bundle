@@ -8,6 +8,21 @@
             <trans-unit id="tl_content.subline.1">
                 <source>Here you can enter a sub-headline.</source>
             </trans-unit>
+
+            <trans-unit id="tl_content.subline_position.0">
+                <source>Subline position</source>
+            </trans-unit>
+            <trans-unit id="tl_content.subline_position.1">
+                <source>Choose where the subline should be displayed.</source>
+            </trans-unit>
+
+            <trans-unit id="tl_content.subline_position_ref.above">
+                <source>Above headline</source>
+            </trans-unit>
+            <trans-unit id="tl_content.subline_position_ref.below">
+                <source>Below headline</source>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

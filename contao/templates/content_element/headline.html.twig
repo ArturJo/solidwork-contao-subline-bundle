@@ -9,11 +9,30 @@ The core template usually defines a 'content' block
 (inherited from _base.html.twig). We override it here.
 #}
 {% block content %}
-    {# Render the original headline (H1-H6) #}
-    {{ parent() }}
+    {% block content %}
 
-    {# Add our subline if it contains value #}
-    {% if subline is defined and subline is not empty %}
-        <div class="content-headline__subline">{{ subline|insert_tag|raw }}</div>
-    {% endif %}
+        {# Subline oben #}
+        {% if subline is defined
+            and subline is not empty
+            and subline_position is defined
+            and subline_position == 'above' %}
+            <div class="sw-subline sw-subline--above">
+                {{ subline|insert_tag|raw }}
+            </div>
+        {% endif %}
+
+        {# Original Headline #}
+        {{ parent() }}
+
+        {# Subline unten #}
+        {% if subline is defined
+            and subline is not empty
+            and (subline_position is not defined or subline_position == 'below') %}
+            <div class="sw-subline sw-subline--below">
+                {{ subline|insert_tag|raw }}
+            </div>
+        {% endif %}
+
+    {% endblock %}
+
 {% endblock %}

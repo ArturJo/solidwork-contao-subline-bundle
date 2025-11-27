@@ -10,6 +10,25 @@
                 <source>Here you can enter a sub-headline.</source>
                 <target>Hier kannst du eine Subline (Unterzeile) erfassen.</target>
             </trans-unit>
+
+            <trans-unit id="tl_content.subline_position.0">
+                <source>Position der Subline</source>
+                <target>Position der Subline</target>
+            </trans-unit>
+            <trans-unit id="tl_content.subline_position.1">
+                <source>Legt fest, wo die Subline ausgegeben wird.</source>
+                <target>Legt fest, wo die Subline ausgegeben wird.</target>
+            </trans-unit>
+
+            <trans-unit id="tl_content.subline_position_ref.above">
+                <source>Above headline</source>
+                <target>Über der Überschrift</target>
+            </trans-unit>
+            <trans-unit id="tl_content.subline_position_ref.below">
+                <source>Below headline</source>
+                <target>Unter der Überschrift</target>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

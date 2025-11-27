@@ -15,6 +15,17 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['subline'] = [
     'sql' => "varchar(255) NOT NULL default ''",
 ];
 
+$GLOBALS['TL_DCA']['tl_content']['fields']['subline_position'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['subline_position'],
+    'exclude' => true,
+    'inputType' => 'select',
+    'options' => ['above', 'below'],
+    'reference' => &$GLOBALS['TL_LANG']['tl_content']['subline_position_ref'],
+    'eval' => ['tl_class' => 'w50'],
+    'sql' => "varchar(16) NOT NULL default 'below'",
+];
+
+
 /**
  * 2. Add the field to the palette.
  * We inject the 'subline' field directly after the 'headline' field
@@ -22,4 +33,5 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['subline'] = [
  */
 PaletteManipulator::create()
     ->addField('subline', 'headline', PaletteManipulator::POSITION_AFTER)
+    ->addField('subline_position', 'subline', PaletteManipulator::POSITION_AFTER)
     ->applyToPalette('headline', 'tl_content');
