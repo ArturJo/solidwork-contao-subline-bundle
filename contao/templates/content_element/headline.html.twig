@@ -14,6 +14,6 @@ The core template usually defines a 'content' block
 
     {# Add our subline if it contains value #}
     {% if subline is defined and subline is not empty %}
-        <div class="subline">{{ subline|insert_tag|raw }}</div>
+        <div class="content-headline__subline">{{ subline|insert_tag|raw }}</div>
     {% endif %}
 {% endblock %}

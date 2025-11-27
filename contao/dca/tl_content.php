@@ -9,8 +9,9 @@ use Contao\CoreBundle\DataContainer\PaletteManipulator;
 $GLOBALS['TL_DCA']['tl_content']['fields']['subline'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_content']['subline'],
     'exclude' => true,
+    'search' => true,
     'inputType' => 'text',
-    'eval' => ['tl_class' => 'w50', 'maxlength' => 255],
+    'eval' => ['tl_class' => 'w50 clr', 'maxlength' => 255],
     'sql' => "varchar(255) NOT NULL default ''",
 ];
 
