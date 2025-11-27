@@ -9,10 +9,10 @@
   },
   "autoload": {
     "psr-4": {
-      "Solidwork\\SublineBundle\\": "src/"
+      "Solidwork\\ContaoSublineBundle\\": "src/"
     }
   },
   "extra": {
-    "contao-manager-plugin": "Solidwork\\SublineBundle\\ContaoManager\\Plugin"
+    "contao-manager-plugin": "Solidwork\\ContaoSublineBundle\\ContaoManager\\Plugin"
   }
 }

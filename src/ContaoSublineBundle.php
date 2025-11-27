@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Solidwork\SublineBundle;
+namespace Solidwork\ContaoSublineBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class SolidworkSublineBundle extends Bundle
+class ContaoSublineBundle extends Bundle
 {
 }
