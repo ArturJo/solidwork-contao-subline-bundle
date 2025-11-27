@@ -1,0 +1,19 @@
+{#
+Extend the original core headline template.
+The namespace @Contao refers to the core bundle templates.
+#}
+{% extends "@Contao/content_element/headline.html.twig" %}
+
+{#
+The core template usually defines a 'content' block
+(inherited from _base.html.twig). We override it here.
+#}
+{% block content %}
+    {# Render the original headline (H1-H6) #}
+    {{ parent() }}
+
+    {# Add our subline if it contains value #}
+    {% if subline is defined and subline is not empty %}
+        <div class="subline">{{ subline|insert_tag }}</div>
+    {% endif %}
+{% endblock %}

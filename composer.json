@@ -1,0 +1,23 @@
+{
+  "name": "solidwork/contao-subline-bundle",
+  "description": "Fügt dem Überschriften-Element eine Subline hinzu.",
+  "type": "contao-bundle",
+  "license": "MIT",
+  "require": {
+    "php": "^8.1",
+    "contao/core-bundle": "^5.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Solidwork\\SublineBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "contao-manager-plugin": "Solidwork\\SublineBundle\\ContaoManager\\Plugin",
+    "contao": {
+      "resource_paths": [
+        "contao/"
+      ]
+    }
+  }
+}

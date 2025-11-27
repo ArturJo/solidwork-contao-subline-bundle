@@ -50,3 +50,38 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+
+
+# ----------------------------------------------------------------------
+# 1. Composer & Dependencies
+# Dependencies installed by Composer should not be tracked in the repository.
+# ----------------------------------------------------------------------
+/vendor
+composer.lock
+
+# ----------------------------------------------------------------------
+# 2. Environment and Configuration
+# Local environment files (if used for testing/local setup)
+# ----------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+
+# ----------------------------------------------------------------------
+# 3. Cache, Logs and Build Files
+# Although a bundle usually doesn't generate cache, we exclude common
+# Symfony paths if the bundle is tested within a Contao/Symfony structure.
+# ----------------------------------------------------------------------
+/var/
+/public/bundles
+
+# ----------------------------------------------------------------------
+# 4. IDE and OS Files
+# Files specific to operating systems or development environments
+# ----------------------------------------------------------------------
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.iml

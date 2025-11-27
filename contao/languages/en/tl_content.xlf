@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2">
+    <file source-language="en" datatype="plaintext" original="tl_content">
+        <body>
+            <trans-unit id="tl_content.subline.0">
+                <source>Subline</source>
+            </trans-unit>
+            <trans-unit id="tl_content.subline.1">
+                <source>Here you can enter a sub-headline.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
