@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Solidwork\ContaoSublineBundle;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Contao\CoreBundle\ContaoCoreBundle\AbstractBundle;
 
-class ContaoSublineBundle extends Bundle
+class ContaoSublineBundle extends AbstractBundle
 {
 }
