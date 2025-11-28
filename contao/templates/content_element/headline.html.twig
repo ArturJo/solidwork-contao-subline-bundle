@@ -10,12 +10,19 @@ The core template usually defines a 'content' block
 #}
     {% block headline_component %}
 
+        {# Check if subline is present and not empty #}
+        {% set has_subline = data.subline is defined and data.subline is not empty %}
+
+        {# Wrapper div if subline is present #}
+        {% if has_subline %}
+            <div class="sw-headline-group">
+        {% endif %}
+
         {# data.subline oben #}
-        {% if data.subline is defined
-            and data.subline is not empty
+        {% if has_subline
             and data.subline_position is defined
             and data.subline_position == 'above' %}
-            <div class="sw-subline sw-subline--above">
+            <div class="sw-headline-group__subline sw-headline-group__subline--above">
                 {{ data.subline|insert_tag|raw }}
             </div>
         {% endif %}
@@ -24,11 +31,15 @@ The core template usually defines a 'content' block
         {{ parent() }}
 
         {# data.subline unten #}
-        {% if data.subline is defined
-            and data.subline is not empty
+        {% if has_subline
             and (data.subline_position is not defined or data.subline_position == 'below') %}
-            <div class="sw-subline sw-subline--below">
+            <div class="sw-headline-group__subline sw-headline-group__subline--below">
                 {{ data.subline|insert_tag|raw }}
+            </div>
+        {% endif %}
+
+        {# Close wrapper div if subline is present #}
+        {% if has_subline %}
             </div>
         {% endif %}
 
