@@ -17,7 +17,8 @@
   },
   "config": {
     "allow-plugins": {
-      "contao-components/installer": true
+      "contao-components/installer": true,
+      "php-http/discovery": true
     }
   }
 }
